@@ -17,7 +17,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: rootUser@123
-      POSTGRES_DB: mydb
+      POSTGRES_DB: books
     ports:
       - "5432:5432" # PostgreSQL service port
 
