@@ -1,4 +1,4 @@
-package com.ameda.kevin.messagequeue.logic;/*
+package com.ameda.kevin.messagequeue.people.config;/*
 *
 @author ameda
 @project message-queue
@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Configuration;
 public class MQConfig {
     public static final String MESSAGE_ROUTING_KEY ="message_routingKey" ;
     public static final String MESSAGE_EXCHANGE = "message_exchange" ;
-    private static final String QUEUE = "message_queue";
+    public static final String QUEUE = "message_queue";
 
     @Bean
     public Queue queue(){

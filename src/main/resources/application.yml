@@ -13,6 +13,7 @@ spring:
         format_sql: true
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
-
+  rabbitmq:
+    addresses: localhost:5672
 server:
   port: 9097
