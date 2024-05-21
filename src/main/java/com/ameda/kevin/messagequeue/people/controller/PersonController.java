@@ -5,6 +5,7 @@ package com.ameda.kevin.messagequeue.people.controller;/*
 *
 */
 
+import com.ameda.kevin.messagequeue.consumer.ConsumePerson;
 import com.ameda.kevin.messagequeue.people.DTO.PersonDTO;
 import com.ameda.kevin.messagequeue.people.DTO.PersonResponse;
 import com.ameda.kevin.messagequeue.people.service.PersonService;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class PersonController {
     private final PersonService personService;
+    private final ConsumePerson consumePerson;
 
     @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody PersonDTO dto){
@@ -30,5 +32,10 @@ public class PersonController {
         }else{
             return new ResponseEntity<>(response,HttpStatus.CREATED);
         }
+    }
+    @PostMapping("/order")
+    public ResponseEntity<?> order(){
+        return ResponseEntity.ok()
+                .body(consumePerson.dispatchOrder());
     }
 }

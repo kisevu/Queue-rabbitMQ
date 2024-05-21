@@ -12,12 +12,14 @@ import com.ameda.kevin.messagequeue.people.entity.Person;
 import com.ameda.kevin.messagequeue.people.repo.PersonRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
+@Scope("singleton")
 public class PersonService {
     private final PersonRepository personRepository;
     private final RabbitTemplate rabbitTemplate;

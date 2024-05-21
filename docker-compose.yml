@@ -15,9 +15,9 @@ services:
     image: postgres:latest
     container_name: postgres
     environment:
-      POSTGRES_USER: postgres
+      POSTGRES_USER: ameda
       POSTGRES_PASSWORD: rootUser@123
-      POSTGRES_DB: books
+      POSTGRES_DB: rabbit
     ports:
       - "5432:5432" # PostgreSQL service port
 
